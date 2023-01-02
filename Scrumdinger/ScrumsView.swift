@@ -13,7 +13,7 @@ struct ScrumsView : View {
         List {
             ForEach(scrums) { scrum in
                 CardView(scrum: scrum)
-                    .listRowBackground(Color("poppy"))
+                    .listRowBackground(scrum.theme.mainColor)
             }
         }
     }

@@ -1,0 +1,26 @@
+//
+//  ScrumsView.swift
+//  Scrumdinger
+//
+//  Created by nrsys on 01/01/23.
+//
+
+import SwiftUI
+
+struct ScrumsView : View {
+    let scrums: [DailyScrum]
+    var body: some View {
+        List {
+            ForEach(scrums) { scrum in
+                CardView(scrum: scrum)
+                    .listRowBackground(Color("poppy"))
+            }
+        }
+    }
+}
+
+struct ScrumsView_Previews: PreviewProvider {
+    static var previews: some View {
+        ScrumsView(scrums: DailyScrum.sampleData)
+    }
+}
